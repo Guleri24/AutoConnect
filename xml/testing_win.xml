@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AutoConnect in Cisco AnyConnect with WinAuth">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+    <test name="AutoConnect in Cisco AnyConnect with WinAuth"/>
+    <test name="WinAuth">
+        <classes>
+            <class name="WinAppWinAuthTest"></class>
+        </classes>
+    </test>
+    <test name="AnyConnect">
+        <classes>
+            <class name="WinAppAnyConnectTest"></class>
+        </classes>
+    </test>
+</suite>
