@@ -5,7 +5,7 @@ AutoConnect is WIP program to automatically connect Cisco AnyConnect VPN using W
 ## Requirements
 
 * Java 20
-* Maven 3.9.3
+* Maven 3.9.3 (Optional)
 * WinAppDriver https://github.com/microsoft/WinAppDriver
 
 ## Running from Source
@@ -29,4 +29,7 @@ AutoConnect is WIP program to automatically connect Cisco AnyConnect VPN using W
 5. Run
 
    `mvn test`
+
+If you don't want to change the current Maven version using you can use Maven wrapper included.
+Replace `mvn <command>` with `.\mvnw.cmd <command>`
 
