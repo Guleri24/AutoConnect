@@ -1,6 +1,7 @@
 import com.guleri24.WinDriver;
 import io.appium.java_client.windows.WindowsDriver;
 import io.appium.java_client.windows.WindowsElement;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -10,9 +11,8 @@ import org.testng.annotations.Test;
 
 import java.net.URI;
 
-public class WinAppAnyConnectTest {
-    public static String password = "password";
-    public String appPath = "C:\\Program Files (x86)\\Cisco\\Cisco AnyConnect Secure Mobility Client\\vpnui.exe";
+public class WinAppDriverCloseTest {
+    public String appPath = "C:\\Program Files\\Windows Application Driver\\WinAppDriver.exe";
     WindowsDriver<WindowsElement> driver = null;
 
     @BeforeTest
@@ -29,19 +29,20 @@ public class WinAppAnyConnectTest {
         driver = new WindowsDriver<>(new URI("http://127.0.0.1:4723/").toURL(), capabilities);
     }
 
-    @Test(description = "Login and enable AnyConnect VPN using WinAuth Authentication Code")
-    public void enableVPN() throws InterruptedException {
+    @Test(description = "Close WinAppDriver Window")
+    public void closeWinApp() throws InterruptedException {
         Actions action = new Actions(driver);
 
-        WebElement connectButton = driver.findElementByName("Connect");
-        action.click(connectButton);
+        WebElement textArea = driver.findElementByName("Text Area");
+        action.click(textArea);
+        action.sendKeys(Keys.ENTER);
+
         action.perform();
-        Thread.sleep(3000);
     }
 
     @AfterTest
     public void tearDown() {
-            WinDriver.stop();
-            driver.quit();
+        WinDriver.stop();
+        driver.quit();
     }
 }

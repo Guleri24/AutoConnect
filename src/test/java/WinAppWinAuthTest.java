@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.net.URI;
 
 public class WinAppWinAuthTest {
-    public static String password = "passed";
+    public static String password = "secret##";
     public String appPath = "C:\\Program Files (x86)\\WinAuth-package\\WinAuth.exe";
     WindowsDriver<WindowsElement> driver = null;
 
@@ -40,7 +40,7 @@ public class WinAppWinAuthTest {
         WebElement okButton = driver.findElementByAccessibilityId("passwordButton");
         action.click(okButton);
         action.perform();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     @AfterTest
@@ -49,7 +49,7 @@ public class WinAppWinAuthTest {
             /* The instance of WinAppDriver will be freed once
             last test is complete
             */
-            /* WinDriver.stop(); */
+            WinDriver.stop();
             driver.quit();
         }
     }
