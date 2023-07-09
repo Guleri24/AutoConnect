@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.net.URI;
 
 public class WinAppWinAuthTest {
-    public static String password = "secret##";
+    public static String password = "Ab040123##";
     public String appPath = "C:\\Program Files (x86)\\WinAuth-package\\WinAuth.exe";
     WindowsDriver<WindowsElement> driver = null;
 
@@ -35,12 +35,18 @@ public class WinAppWinAuthTest {
 
         WebElement passwordField = driver.findElementByAccessibilityId("passwordField");
         action.click(passwordField);
-        action.sendKeys(password);
+        action.sendKeys(password).perform();
 
         WebElement okButton = driver.findElementByAccessibilityId("passwordButton");
-        action.click(okButton);
-        action.perform();
-        Thread.sleep(3000);
+        action.click(okButton).perform();
+
+        Thread.sleep(2000);
+        WebElement openDropDown = driver.findElementByAccessibilityId("WinAuthForm");
+        action.contextClick(openDropDown).perform();
+
+        WebElement getCode = driver.findElementByName("Copy Code");
+        action.click(getCode).perform();
+
     }
 
     @AfterTest
