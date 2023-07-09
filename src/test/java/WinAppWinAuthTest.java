@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.net.URI;
 
 public class WinAppWinAuthTest {
-    public static String password = "Ab040123##";
+    public static String password = "secret##";
     public String appPath = "C:\\Program Files (x86)\\WinAuth-package\\WinAuth.exe";
     WindowsDriver<WindowsElement> driver = null;
 

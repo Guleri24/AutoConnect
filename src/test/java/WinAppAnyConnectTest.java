@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.net.URI;
 
 public class WinAppAnyConnectTest {
-    public static String password = "Ab040123##";
+    public static String password = "secret";
     public String appPath = "C:\\Program Files (x86)\\Cisco\\Cisco AnyConnect Secure Mobility Client\\vpnui.exe";
     WindowsDriver<WindowsElement> driver = null;
 
@@ -37,6 +37,13 @@ public class WinAppAnyConnectTest {
         action.click(connectButton);
         action.perform();
         Thread.sleep(3000);
+
+        WebElement passcodeField = driver.findElementByName("Passcode:");
+        action.click(passcodeField);
+        action.sendKeys(password).perform();
+
+        WebElement okButton = driver.findElementByName("OK");
+        action.click(okButton).perform();
     }
 
     @AfterTest
