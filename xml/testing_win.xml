@@ -12,9 +12,9 @@
             <class name="WinAppWinAuthTest"></class>
         </classes>
     </test>
-<!--    <test name="AnyConnect">-->
-<!--        <classes>-->
-<!--            <class name="WinAppAnyConnectTest"></class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="AnyConnect">
+        <classes>
+            <class name="WinAppAnyConnectTest"></class>
+        </classes>
+    </test>
 </suite>
