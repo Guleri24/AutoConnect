@@ -1,6 +1,6 @@
 # AutoConnect
 
-AutoConnect is WIP program to automatically connect Cisco AnyConnect VPN using WinAuth Authentication Code in Windows10
+AutoConnect is abandoned (-.-) program to automatically connect Cisco AnyConnect VPN using WinAuth Authentication Code in Windows10
 
 
 https://github.com/Guleri24/AutoConnect/assets/43719098/a4f539c6-6a9c-4e5e-b250-d9ed4ed15ebc
